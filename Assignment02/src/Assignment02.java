@@ -1,7 +1,7 @@
-// CSE 110     : <Class #> / <meeting days and times>
-// Assignment  : <assignment #>
-// Author      : <name> & <studentID>
-// Description : <of the file contents>
+// CSE 110     : CSE 110
+// Assignment  : <assignment 2>
+// Author      : lansing jenkins
+// Description : Calculating cost of building a road based on user input
 
 import java.util.Scanner;
 
