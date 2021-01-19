@@ -1,0 +1,97 @@
+[001]  blah blah
+[002]  
+[003]          blah blah
+[004]  
+[005]          blah blah
+[006]  
+[007]          blah blah
+[008]  
+[009]  
+[010]  /**
+[011]   * CLASS: H1_43 (H1_43.java)
+[012]   * GROUP YY
+[013]   * AUTHOR 1: Lansing Jenkins, ljenki14, ljenki14@asu.edu
+[014]   * AUTHOR 2: Charles Cipolla, ccipolla, ccipolla@asu.edu
+[015]   * AUTHOR 3: Gregory Ingraham, gingrah, gingrah@asu.edu
+[016]   */
+[017]  
+[018]  import java.io.*;
+[019]  import java.util.*;
+[020]  
+[021]  public class H1_43 {
+[022]      public H1_43(){}
+[023]      public static void main(String[] args){
+[024]          Scanner in = new Scanner(System.in);
+[025]          System.out.print("Enter the full path of the file you would like to copy.");
+[026]          String filePath = in.next();
+[027]          File file = new File(filePath);
+[028]  
+[029]          try {
+[030]              FileInputStream stream = null;
+[031]              InputStreamReader streamReader = null;
+[032]              BufferedReader bufferedReader = null;
+[033]              FileWriter fileWriter = null;
+[034]              Formatter formatter = null;
+[035]              try {
+[036]                  int count = 0;
+[037]                  stream = new FileInputStream(file);
+[038]                  streamReader = new InputStreamReader(stream);
+[039]                  bufferedReader = new BufferedReader(streamReader);
+[040]                  String line;
+[041]                  fileWriter = new FileWriter(file.getName()+".txt");
+[042]                  while ((line = bufferedReader.readLine()) != null) {
+[043]                      count ++;
+[044]                      formatter = new Formatter();
+[045]                      fileWriter.write("[" + formatter.format("%03d", count) + "]" + "  " + line + String.format("%n"));
+[046]                  }
+[047]              } finally {
+[048]  
+[049]                  if (stream != null) {
+[050]                      stream.close();
+[051]                  }
+[052]                  if (streamReader != null) {
+[053]                      streamReader.close();
+[054]                  }
+[055]                  if (bufferedReader != null) {
+[056]                      bufferedReader.close();
+[057]                  }
+[058]                  if (fileWriter != null) {
+[059]                      fileWriter.close();
+[060]                  }
+[061]                  if (formatter != null) {
+[062]                      formatter.close();
+[063]                  }
+[064]              }
+[065]          } catch (Exception e) {
+[066]              System.out.println(e.toString());
+[067]          }
+[068]          System.out.println(filePath);
+[069]      }
+[070]  }
+[071]   blah
+[072]  
+[073]  
+[074]  
+[075]  
+[076]  \
+[077]  
+[078]  
+[079]  
+[080]  
+[081]  
+[082]  blah
+[083]  
+[084]  
+[085]  
+[086]  
+[087]  |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[088]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[089]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[090]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[091]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[092]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[093]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[094]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\|||||||||||||||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[095]  
+[096]           |||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\||||||||||||||||||
+[097]  
